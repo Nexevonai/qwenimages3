@@ -3,7 +3,7 @@
     "inputs": {
       "text": "1girl, in a polished and casual glam selfie with a k-beauty aesthetic, a beautiful young East Asian woman is captured in a centered, head-and-shoulders close-up, posing with her head slightly tilted and a soft, subtle smile, her dark brown eyes holding a direct gaze from under a heavy fringe of vibrant, shaggy, layered pink hair, her face featuring dramatic false eyelashes, sharp winged eyeliner, prominent pink blush, and overlined glossy lips, creating a \"glass skin\" effect with a dewy, oily shine and strong specular highlights on her nose and cheekbones that completely obscures any natural skin texture for an unnaturally smooth, poreless, airbrushed appearance, while she wears a cream-colored eyelet lace camisole with thin spaghetti straps and is accessorized with a layered silver chain necklace featuring a Vivienne Westwood-style orb pendant, all within a brightly lit indoor hair salon in a high-resolution professional DSLR photo characterized by soft, diffuse frontal lighting that creates a sharp, clean image with very low noise.",
       "clip": [
-        "99",
+        "105",
         0
       ]
     },
@@ -16,7 +16,7 @@
     "inputs": {
       "text": "cinematic, shallow depth of field, cinematic bokeh, blurred background, portrait, closeup, anime, chibi, big head, anime proportions",
       "clip": [
-        "99",
+        "105",
         0
       ]
     },
@@ -38,7 +38,7 @@
     },
     "class_type": "VAEDecode",
     "_meta": {
-      "title": "VAEDecode"
+      "title": "VAE Decode"
     }
   },
   "39": {
@@ -47,7 +47,7 @@
     },
     "class_type": "VAELoader",
     "_meta": {
-      "title": "VAELoader"
+      "title": "Load VAE"
     }
   },
   "60": {
@@ -60,7 +60,7 @@
     },
     "class_type": "SaveImage",
     "_meta": {
-      "title": "SaveImage"
+      "title": "Save Image"
     }
   },
   "66": {
@@ -78,17 +78,7 @@
   },
   "75": {
     "inputs": {
-      "eta": 0.5,
-      "sampler_name": "exponential/res_2s",
-      "scheduler": "beta57",
-      "steps": 50,
-      "steps_to_run": -1,
-      "denoise": 1,
-      "cfg": 2.5,
-      "seed": 1060912156056933,
-      "control_after_generate": "randomize",
-      "sampler_mode": "standard",
-      "bongmath": true,
+      "UNKNOWN": true,
       "model": [
         "66",
         0
@@ -104,12 +94,19 @@
       "latent_image": [
         "95",
         0
+      ],
+      "seed": [
+        "94",
+        0
       ]
     },
-    "class_type": "ClownsharKSampler_Beta",
-    "_meta": {
-      "title": "ClownsharKSampler_Beta"
-    }
+    "_meta": {}
+  },
+  "94": {
+    "inputs": {
+      "UNKNOWN": "randomize"
+    },
+    "_meta": {}
   },
   "95": {
     "inputs": {
@@ -119,46 +116,25 @@
     },
     "class_type": "EmptyLatentImage",
     "_meta": {
-      "title": "EmptyLatentImage"
-    }
-  },
-  "96": {
-    "inputs": {
-      "unet_name": "qwen_image_bf16.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNETLoader"
-    }
-  },
-  "99": {
-    "inputs": {
-      "clip_name": "qwen_2.5_vl_7b.safetensors",
-      "type": "qwen_image",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "CLIPLoader"
+      "title": "Empty Latent Image"
     }
   },
   "103": {
     "inputs": {
-      "lora_01": "1GIRL_QWEN_V3.safetensors",
+      "lora_01": "1girl-qwen_v3.safetensors",
       "strength_01": 1,
-      "lora_02": "samsungcam.safetensors",
+      "lora_02": "NiceGirls_qwen.safetensors",
       "strength_02": 0.4,
-      "lora_03": "None",
-      "strength_03": 1,
+      "lora_03": "samsungcam_qwen.safetensors",
+      "strength_03": 0.4,
       "lora_04": "None",
       "strength_04": 1,
       "model": [
-        "96",
+        "104",
         0
       ],
       "clip": [
-        "99",
+        "105",
         0
       ]
     },
@@ -166,5 +142,17 @@
     "_meta": {
       "title": "Lora Loader Stack (rgthree)"
     }
+  },
+  "104": {
+    "inputs": {
+      "UNKNOWN": "qwen-image-Q8_0.gguf"
+    },
+    "_meta": {}
+  },
+  "105": {
+    "inputs": {
+      "UNKNOWN": "qwen_image"
+    },
+    "_meta": {}
   }
 }
